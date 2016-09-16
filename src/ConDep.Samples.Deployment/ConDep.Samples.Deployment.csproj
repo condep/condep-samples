@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\WebApi.cs" />
     <Compile Include="ConfigExtensions.cs" />
     <Compile Include="Infrastructure\Environments.cs" />
     <Compile Include="Infrastructure\EnvironmentSetting.cs" />
@@ -122,6 +123,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="ProdApiServer.Env.json" />
+    <None Include="TestApiServer.Env.json" />
     <None Include="TestWebServer.Env.json" />
     <None Include="ProdWebServer.Env.json" />
   </ItemGroup>
