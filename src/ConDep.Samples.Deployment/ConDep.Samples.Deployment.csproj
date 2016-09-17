@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK, Version=2.3.50.1, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.2.3.50.1\lib\net45\AWSSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ConDep, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConDep.5.0.0-beta997\lib\net40\ConDep.exe</HintPath>
       <Private>True</Private>
@@ -40,6 +44,10 @@
     </Reference>
     <Reference Include="ConDep.Dsl.Operations, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConDep.Dsl.Operations.5.0.0-beta8\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConDep.Dsl.Operations.Aws, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.Operations.Aws.5.0.0-beta92\lib\net40\ConDep.Dsl.Operations.Aws.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Remote.Helpers, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -114,6 +122,8 @@
   <ItemGroup>
     <Compile Include="Applications\WebApi.cs" />
     <Compile Include="Applications\WindowsService.cs" />
+    <Compile Include="Cloud\AWS\BootstrappedInstance.cs" />
+    <Compile Include="Cloud\AWS\TerminateInstance.cs" />
     <Compile Include="ConfigExtensions.cs" />
     <Compile Include="Infrastructure\Environments.cs" />
     <Compile Include="Infrastructure\EnvironmentSetting.cs" />

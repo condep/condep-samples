@@ -10,9 +10,9 @@ namespace ConDep.Samples.Deployment.Infrastructure.WindowsServices
         private const string ServiceGroup = "ConDepServices";
         private const string Password = "SuperSecretPassword";
 
-        protected string ServiceName { get; }
-        protected string ServiceRelativeRootPath { get; }
-        protected string DestinationDir { get; }
+        protected string ServiceName { get; set; }
+        protected string ServiceRelativeRootPath { get; set; }
+        protected string DestinationDir { get; set; }
 
         protected WindowsServiceRunbook(string serviceName)
         {
