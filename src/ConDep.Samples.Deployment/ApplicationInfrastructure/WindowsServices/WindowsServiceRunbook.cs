@@ -1,8 +1,8 @@
-﻿using ConDep.Dsl;
+﻿using System.ServiceProcess;
+using ConDep.Dsl;
 using ConDep.Dsl.Config;
-using System.ServiceProcess;
 
-namespace ConDep.Samples.Deployment.Infrastructure.WindowsServices
+namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
 {
     public class WindowsServiceRunbook : Runbook
     {

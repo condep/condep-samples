@@ -1,4 +1,4 @@
-﻿using ConDep.Samples.Deployment.Infrastructure.WindowsServices;
+﻿using ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices;
 
 namespace ConDep.Samples.Deployment.Applications
 {

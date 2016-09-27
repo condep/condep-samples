@@ -1,4 +1,4 @@
-namespace ConDep.Samples.Deployment.Infrastructure
+namespace ConDep.Samples.Deployment.ApplicationInfrastructure
 {
     public enum Environments
     {

@@ -1,4 +1,4 @@
-namespace ConDep.Samples.Deployment.Infrastructure.Iis
+namespace ConDep.Samples.Deployment.ApplicationInfrastructure.Iis
 {
     public class WwwApplicationWebSite : WebSiteRunbook
     {

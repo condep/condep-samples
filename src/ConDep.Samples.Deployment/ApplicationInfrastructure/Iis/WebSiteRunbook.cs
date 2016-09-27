@@ -4,7 +4,7 @@ using ConDep.Dsl;
 using ConDep.Dsl.Config;
 using ConDep.Dsl.Operations.Infrastructure.IIS;
 
-namespace ConDep.Samples.Deployment.Infrastructure.Iis
+namespace ConDep.Samples.Deployment.ApplicationInfrastructure.Iis
 {
     public class WebSiteRunbook : Runbook
     {
@@ -79,14 +79,14 @@ namespace ConDep.Samples.Deployment.Infrastructure.Iis
         public bool AlwaysOn { get; set; }
         public int AppPoolIdleTimeout { get; set; }
         public EnvironmentSetting EnvironmentSettings { get; set; }
-        public string SiteName { get { return WebSitePrefix + ".condep-samples.no"; } }
+        public string SiteName { get { return WebSitePrefix + ".condep-samples.io"; } }
         public string HostName { get { return WebSitePrefix + "." + EnvironmentSettings.Suffix; } }
         public string WebSitePrefix { get; set; }
 
         public static readonly Dictionary<string, EnvironmentSetting> Settings = new Dictionary<string, EnvironmentSetting>
         {
-            {"Test", new EnvironmentSetting("password1", "test.condep-samples.no", Environments.Test)},
-            {"Prod", new EnvironmentSetting("password2", "condep-samples.no", Environments.Prod)},
+            {"Test", new EnvironmentSetting("password_test", "test.condep-samples.io", Environments.Test)},
+            {"Prod", new EnvironmentSetting("password", "condep-samples.io", Environments.Prod)},
         };
     }
 }

@@ -1,6 +1,6 @@
 using ConDep.Dsl;
 using ConDep.Dsl.Config;
-using ConDep.Samples.Deployment.Infrastructure.Iis;
+using ConDep.Samples.Deployment.ApplicationInfrastructure.Iis;
 
 namespace ConDep.Samples.Deployment.Applications
 {
