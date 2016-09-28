@@ -108,6 +108,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -129,6 +130,13 @@
     <Compile Include="ApplicationInfrastructure\EnvironmentSetting.cs" />
     <Compile Include="ApplicationInfrastructure\Iis\WebSiteRunbook.cs" />
     <Compile Include="ApplicationInfrastructure\WindowsServices\WindowsServiceRunbook.cs" />
+    <Compile Include="CustomOperations\Iis\ConfigureIisMachineKeyOperation.cs" />
+    <Compile Include="CustomOperations\Iis\IisExtensions.cs" />
+    <Compile Include="CustomOperations\Iis\InstallApplicationRequestRouting3Operation.cs" />
+    <Compile Include="CustomOperations\Iis\InstallIisNodeOperation.cs" />
+    <Compile Include="CustomOperations\Iis\InstallUrlRewrite2Operation.cs" />
+    <Compile Include="CustomOperations\Windows\DisableUserAccountControlOperation.cs" />
+    <Compile Include="CustomOperations\Windows\WindowsExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Applications\WwwApplication.cs" />
     <Compile Include="ApplicationInfrastructure\Iis\WebSites.cs" />
@@ -137,6 +145,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="Scripts\MachineKey.ps1" />
     <None Include="TestServiceServer.Env.json" />
     <None Include="ProdServiceServer.Env.json" />
     <None Include="ProdApiServer.Env.json" />
