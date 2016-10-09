@@ -43,12 +43,12 @@
       <HintPath>..\packages\ConDep.Dsl.5.0.1-beta00025\lib\net40\ConDep.Dsl.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Dsl.Operations, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.Operations.5.0.0-beta9\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
+    <Reference Include="ConDep.Dsl.Operations, Version=5.0.1.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.Operations.5.0.1-beta00009\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Operations.Aws, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.Operations.Aws.5.0.0-beta92\lib\net40\ConDep.Dsl.Operations.Aws.dll</HintPath>
+      <HintPath>..\packages\ConDep.Dsl.Operations.Aws.5.0.0-beta93\lib\net40\ConDep.Dsl.Operations.Aws.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Remote.Helpers, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">

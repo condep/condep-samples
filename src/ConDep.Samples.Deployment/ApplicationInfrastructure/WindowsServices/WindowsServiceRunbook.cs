@@ -30,32 +30,29 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
 
             dsl.Remote(server =>
             {
-                server.Deploy
-                    .WindowsService(
-                        serviceName: ServiceName,
-                        displayName: ServiceName,
-                        sourceDir: ServiceRelativeRootPath,
-                        destDir: DestinationDir,
-                        relativeExePath: ServiceRelativeRootPath + ServiceName + ".exe",
-                        options: opt =>
-                        {
-                            opt
-                                .DoNotStartAfterInstall()
-                                .StartupType(ServiceStartMode.Automatic)
-                                .ServiceGroup(ServiceGroup)
-                                .OnServiceFailure(43200, failure =>
-                                {
-                                    failure
-                                        .FirstFailure.RestartService(10000)
-                                        .SecondFailure.RestartService(10000)
-                                        .SubsequentFailures.TakeNoAction();
-                                });
-                        });
-                                
-                    server.Execute.DosCommand(string.Format("{0} config \"{1}\" start= \"delayed-auto\"", SERVICE_CONTROLLER_EXE, ServiceName));
-
-                    server.Execute.PowerShell(string.Format("Start-ConDepWinService '{0}' 240 $false", ServiceName));
-                });
+                server.Deploy.WindowsService(
+                    serviceName: ServiceName,
+                    displayName: ServiceName,
+                    sourceDir: ServiceRelativeRootPath,
+                    destDir: DestinationDir,
+                    relativeExePath: ServiceRelativeRootPath + ServiceName + ".exe",
+                    options: opt =>
+                    {
+                        opt
+                            .DoNotStartAfterInstall()
+                            .StartupType(ServiceStartMode.Automatic)
+                            .ServiceGroup(ServiceGroup)
+                            .EnableDelayedAutoStart()
+                            .TimeoutInSeconds(240)
+                            .OnServiceFailure(43200, failure =>
+                            {
+                                failure
+                                    .FirstFailure.RestartService(10000)
+                                    .SecondFailure.RestartService(10000)
+                                    .SubsequentFailures.TakeNoAction();
+                            });
+                    });
+            });
         }
     }
 }
