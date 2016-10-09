@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConDep.Samples.Deployment</RootNamespace>
     <AssemblyName>ConDep.Samples.Deployment</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,16 +35,16 @@
       <HintPath>..\packages\AWSSDK.2.3.50.1\lib\net45\AWSSDK.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.5.0.0-beta997\lib\net40\ConDep.exe</HintPath>
+    <Reference Include="ConDep, Version=5.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.5.0.1-beta00007\lib\net40\ConDep.exe</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Dsl, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.5.0.0-beta95\lib\net40\ConDep.Dsl.dll</HintPath>
+    <Reference Include="ConDep.Dsl, Version=5.0.1.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.5.0.1-beta00025\lib\net40\ConDep.Dsl.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Operations, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.Operations.5.0.0-beta8\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
+      <HintPath>..\packages\ConDep.Dsl.Operations.5.0.0-beta9\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Operations.Aws, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -54,8 +55,8 @@
       <HintPath>..\packages\ConDep.Dsl.Remote.Helpers.3.1.0\lib\net20\ConDep.Dsl.Remote.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Execution, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Execution.5.0.0-beta9996\lib\net40\ConDep.Execution.dll</HintPath>
+    <Reference Include="ConDep.Execution, Version=5.0.1.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Execution.5.0.1-beta00014\lib\net40\ConDep.Execution.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.WebQ.Client, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -144,7 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="CloudServer.Env.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <EmbeddedResource Include="Scripts\MachineKey.ps1" />
     <None Include="TestServiceServer.Env.json" />
     <None Include="ProdServiceServer.Env.json" />
