@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConDep.Samples.Deployment", "ConDep.Samples.Deployment\ConDep.Samples.Deployment.csproj", "{4A95F08C-34C2-4192-93A1-9E78A3A902C3}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConDep.Samples.WindowsService", "ConDep.Samples.WindowsService\ConDep.Samples.WindowsService.csproj", "{D8977131-BD52-4FA1-B60D-773B228484CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConDep.Samples.WwwApplication", "ConDep.Samples.WwwApplication\ConDep.Samples.WwwApplication.csproj", "{15E0DAF0-FB99-4B69-9256-002E846048F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{74530FC0-F02C-4E79-9EF3-791791E16433}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\default.ps1 = ..\build\default.ps1
+		..\build\deploy.ps1 = ..\build\deploy.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
