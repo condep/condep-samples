@@ -17,7 +17,8 @@ namespace ConDep.Samples.Deployment
         {
             var env = settings.Config.EnvironmentName.ToLowerInvariant();
             return env == "testwebserver"
-                || env == "testapiserver";
+                || env == "testapiserver"
+                || env == "cloudserver";
         }
 
         public static bool IsProdEnv(this ConDepSettings settings)

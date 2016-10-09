@@ -26,7 +26,7 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
             var username = "ServiceUser";
             var env = settings.Environment();
 
-            //dsl.Local.TransformConfigFile(ServiceRelativeRootPath, ServiceName + ".dll.config", string.Format("App.{0}.config", env));
+            dsl.Local.TransformConfigFile(ServiceRelativeRootPath, ServiceName + ".exe.config", string.Format("App.{0}.config", env));
 
             dsl.Remote(server =>
             {
