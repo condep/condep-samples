@@ -1,0 +1,8 @@
+version: 1.0.0-beta{build}
+branches:
+  only:
+  - master
+configuration:
+- Release
+build_script:
+- ps: .\build.ps1
