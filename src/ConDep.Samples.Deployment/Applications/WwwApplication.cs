@@ -1,12 +1,13 @@
 using ConDep.Dsl;
 using ConDep.Dsl.Config;
 using ConDep.Samples.Deployment.ApplicationInfrastructure.Iis;
+using ConDep.Samples.Deployment.Cloud.AWS;
 
 namespace ConDep.Samples.Deployment.Applications
 {
-    public class WwwApplication : Runbook, IDependOn<WwwApplicationWebSite>
+    public class WwwApplication : Runbook, IDependOn<WwwApplicationWebSite>, IDependOn<BootstrappedInstance> //Deploy this app to a bootstrapped aws instance
     {
-        private const string PublishedWebsitesPath = @"..\deployment\_PublishedWebSites\ConDep.Samples.WwwApplication\";
+        private const string PublishedWebsitesPath = @"_PublishedWebSites\ConDep.Samples.WwwApplication\";
 
         public override void Execute(IOfferOperations dsl, ConDepSettings settings)
         {
