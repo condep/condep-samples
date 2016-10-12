@@ -85,8 +85,9 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.Iis
 
         public static readonly Dictionary<string, EnvironmentSetting> Settings = new Dictionary<string, EnvironmentSetting>
         {
+            //this example uses separate ssl cert files, but the cert is in reality the same.
             {"Test", new EnvironmentSetting("password_test", "test.condep-samples.io", Environments.Test)},
-            {"Prod", new EnvironmentSetting("password", "condep-samples.io", Environments.Prod)},
+            {"Prod", new EnvironmentSetting("password_test", "prod.condep-samples.io", Environments.Prod)},
         };
     }
 }
