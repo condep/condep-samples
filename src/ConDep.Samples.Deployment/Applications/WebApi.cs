@@ -5,14 +5,20 @@ using ConDep.Samples.Deployment.Cloud.AWS;
 
 namespace ConDep.Samples.Deployment.Applications
 {
-    public class WebApi : Runbook, IDependOn<WebApiWebSite>, IDependOn<BootstrappedInstance> //Deploy this app to a bootstrapped aws instance
+    public class WebApi : Runbook
     {
         private const string PublishedWebsitesPath = @"_PublishedWebSites\ConDep.Samples.WebApi\";
 
         public override void Execute(IOfferOperations dsl, ConDepSettings settings)
         {
-            var env = settings.Environment()
-                ;
+            var env = settings.Environment();
+
+            //Need server in aws to deploy to. This runbook bootstraps an instance in aws
+            Runbook.Execute<AwsApiServerRunbook>(dsl, settings);
+
+            //Need IIS Web Site
+            Runbook.Execute<WebApiWebSite>(dsl, settings);
+
             //Transform the web config for the api according to given environment
             dsl.Local.TransformConfigFile(PublishedWebsitesPath, "web.config", string.Format("web.{0}.config", env));
 

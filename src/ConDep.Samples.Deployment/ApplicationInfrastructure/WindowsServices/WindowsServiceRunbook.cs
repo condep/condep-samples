@@ -1,6 +1,7 @@
 ﻿using System.ServiceProcess;
 using ConDep.Dsl;
 using ConDep.Dsl.Config;
+using ConDep.Samples.Deployment.Cloud.AWS;
 
 namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
 {
@@ -23,6 +24,9 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
 
         public override void Execute(IOfferOperations dsl, ConDepSettings settings)
         {
+            //Need server in aws to deploy to. This runbook bootstraps an instance in aws
+            Runbook.Execute<AwsAppServerRunbook>(dsl, settings);
+
             var username = "ServiceUser";
             var env = settings.Environment();
 

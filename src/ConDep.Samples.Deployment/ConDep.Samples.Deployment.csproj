@@ -39,20 +39,20 @@
       <HintPath>..\packages\ConDep.5.0.1-beta00007\lib\net40\ConDep.exe</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Dsl, Version=5.0.1.25, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.5.0.1-beta00025\lib\net40\ConDep.Dsl.dll</HintPath>
+    <Reference Include="ConDep.Dsl, Version=5.0.1.26, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.5.0.1-beta00026\lib\net40\ConDep.Dsl.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl.Operations, Version=5.0.1.9, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConDep.Dsl.Operations.5.0.1-beta00009\lib\net40\ConDep.Dsl.Operations.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Dsl.Operations.Aws, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.Operations.Aws.5.0.0-beta93\lib\net40\ConDep.Dsl.Operations.Aws.dll</HintPath>
+    <Reference Include="ConDep.Dsl.Operations.Aws, Version=5.0.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.Operations.Aws.5.0.1-beta00011\lib\net40\ConDep.Dsl.Operations.Aws.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep.Dsl.Remote.Helpers, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Dsl.Remote.Helpers.3.1.0\lib\net20\ConDep.Dsl.Remote.Helpers.dll</HintPath>
+    <Reference Include="ConDep.Dsl.Remote.Helpers, Version=3.2.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Dsl.Remote.Helpers.3.2.1-beta00006\lib\net45\ConDep.Dsl.Remote.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Execution, Version=5.0.1.15, Culture=neutral, processorArchitecture=MSIL">
@@ -67,8 +67,8 @@
       <HintPath>..\packages\ConDep.WebQ.Client.2.0.0\lib\net40\ConDep.WebQ.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDepNode, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.Node.4.1.0-beta0001\lib\net40\ConDepNode.exe</HintPath>
+    <Reference Include="ConDepNode, Version=4.1.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.Node.4.1.0-beta00013\lib\net40\ConDepNode.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.6.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
@@ -124,7 +124,9 @@
   <ItemGroup>
     <Compile Include="Applications\WebApi.cs" />
     <Compile Include="Applications\WindowsService.cs" />
-    <Compile Include="Cloud\AWS\BootstrappedInstance.cs" />
+    <Compile Include="Cloud\AWS\AwsApiServerRunbook.cs" />
+    <Compile Include="Cloud\AWS\AwsWebServerRunbook.cs" />
+    <Compile Include="Cloud\AWS\AwsAppServerRunbook.cs" />
     <Compile Include="Cloud\AWS\TerminateInstance.cs" />
     <Compile Include="ConfigExtensions.cs" />
     <Compile Include="ApplicationInfrastructure\Environments.cs" />

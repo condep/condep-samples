@@ -1,10 +1,9 @@
 ﻿using ConDep.Dsl;
 using ConDep.Dsl.Config;
-using System;
 
 namespace ConDep.Samples.Deployment.Cloud.AWS
 {
-    public class BootstrappedInstance : Runbook
+    public class AwsAppServerRunbook : Runbook
     {
         private const string SubNet = "subnet-1";
         private const string InstanceType = "t2.small";
