@@ -35,8 +35,8 @@
       <HintPath>..\packages\AWSSDK.2.3.50.1\lib\net45\AWSSDK.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ConDep, Version=5.0.1.20, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ConDep.5.0.1-beta00020\lib\net45\ConDep.exe</HintPath>
+    <Reference Include="ConDep, Version=5.0.1.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.5.0.1-beta00022\lib\net45\ConDep.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDep.Dsl, Version=5.0.1.32, Culture=neutral, processorArchitecture=MSIL">
@@ -57,6 +57,14 @@
     </Reference>
     <Reference Include="ConDep.Execution, Version=5.0.1.23, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConDep.Execution.5.0.1-beta00023\lib\net45\ConDep.Execution.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConDep.WebQ.Client, Version=5.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.WebQ.Client.5.0.1-beta00006\lib\net45\ConDep.WebQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConDep.WebQ.Data, Version=5.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConDep.WebQ.Client.5.0.1-beta00006\lib\net45\ConDep.WebQ.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ConDepNode, Version=5.0.1.17, Culture=neutral, processorArchitecture=MSIL">
