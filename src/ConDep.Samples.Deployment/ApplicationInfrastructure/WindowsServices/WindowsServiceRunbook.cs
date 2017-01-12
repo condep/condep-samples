@@ -19,7 +19,7 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
         {
             ServiceName = serviceName;
             ServiceRelativeRootPath = @"_PublishedServices\" + serviceName;
-            DestinationDir = @"E:\WindowsServices\" + serviceName;
+            DestinationDir = @"E:\WindowsServices\" + serviceName + @"\";
         }
 
         public override void Execute(IOfferOperations dsl, ConDepSettings settings)
@@ -39,7 +39,7 @@ namespace ConDep.Samples.Deployment.ApplicationInfrastructure.WindowsServices
                     displayName: ServiceName,
                     sourceDir: ServiceRelativeRootPath,
                     destDir: DestinationDir,
-                    relativeExePath: ServiceRelativeRootPath + ServiceName + ".exe",
+                    relativeExePath: DestinationDir + ServiceName + ".exe",
                     options: opt =>
                     {
                         opt

@@ -23,7 +23,7 @@ namespace ConDep.Samples.Deployment.Applications
             dsl.Local.TransformConfigFile(PublishedWebsitesPath, "web.config", string.Format("web.{0}.config", env));
 
             //Deploy the web api
-            dsl.Remote(server => server.Deploy.IisWebApplication(PublishedWebsitesPath, @"E:\api.condep-samples.no", "api.condep-samples.no"));
+            dsl.Remote(server => server.Deploy.IisWebApplication(PublishedWebsitesPath, @"E:\api.condep-samples.io", "api.condep-samples.io"));
         }
     }
 }

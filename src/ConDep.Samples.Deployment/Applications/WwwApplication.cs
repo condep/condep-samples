@@ -7,7 +7,7 @@ namespace ConDep.Samples.Deployment.Applications
 {
     public class WwwApplication : Runbook
     {
-        private const string PublishedWebsitesPath = @"_PublishedWebSites\ConDep.Samples.WwwApplication\";
+        private const string PublishedWebsitesPath = @"_PublishedWebsites\ConDep.Samples.WwwApplication\";
 
         public override void Execute(IOfferOperations dsl, ConDepSettings settings)
         {
@@ -23,7 +23,7 @@ namespace ConDep.Samples.Deployment.Applications
             dsl.Local.TransformConfigFile(PublishedWebsitesPath, "web.config", string.Format("web.{0}.config", env));
 
             //Deploy the www application
-            dsl.Remote(server => server.Deploy.IisWebApplication(PublishedWebsitesPath + @"ConDep.Samples.WwwApplication\", @"E:\www.condep-samples.no", "www.condep-samples.no"));
+            dsl.Remote(server => server.Deploy.IisWebApplication(PublishedWebsitesPath, @"E:\www.condep-samples.io", "www.condep-samples.io"));
         }
     }
 }
